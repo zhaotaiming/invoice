@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>請求書PDF作成</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+
+    <!-- 使用 Google Fonts 加载 Noto Sans SC 字体，支持中文 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&display=swap" rel="stylesheet">
+
+    <!-- 加载 jsPDF 和 autoTable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <h1>請求書生成</h1>
+    
+    <!-- 添加用于输入名字、日期、邮编、三个地址和联系电话的框 -->
+    <form id="infoForm">
+        <label for="userName">相手の名前（必須）:</label>
+        <input type="text" id="userName" name="userName"><br><br>
+
+        <label for="date">請求日（必須）:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="postalCode">郵便番号:</label>
+        <input type="text" id="postalCode" name="postalCode"><br><br>
+
+        <label for="address1">地址1（必須）:</label>
+        <input type="text" id="address1" name="address1"><br><br>
+
+        <label for="address2">地址2:</label>
+        <input type="text" id="address2" name="address2"><br><br>
+
+        <label for="address3">地址3:</label>
+        <input type="text" id="address3" name="address3"><br><br>
+
+        <label for="phoneNumber">電話番号（必須）:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+
+        <div id="inputRows">
+            <!-- 动态添加输入行 -->
+        </div>
+        
+        <label for="note">備考欄:</label>
+        <textarea id="note" name="note" rows="4" cols="50"></textarea><br><br>
+        <button type="button" onclick="generatePDF()">PDFを生成</button>
+        <button type="button" onclick="exportToExcel()">导出 Excel</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

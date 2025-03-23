@@ -1,19 +1,19 @@
-// const correctPassword = "weiwei"; // 你设定的密码
-// let input;
+const correctPassword = "weiwei"; // 你设定的密码
+let input;
 
-// while (true) {
-//   input = prompt("请输入密码：");
-//   if (input === null) {
-//     // 用户点了“取消”
-//     document.write("访问已取消。");
-//     break;
-//   } else if (input === correctPassword) {
-//     // 密码正确，什么也不提示，直接跳出循环进入页面
-//     break;
-//   } else {
-//     alert("密码错误，请重新输入！");
-//   }
-// }
+while (true) {
+  input = prompt("请输入密码：");
+  if (input === null) {
+    // 用户点了“取消”
+    document.write("访问已取消。");
+    break;
+  } else if (input === correctPassword) {
+    // 密码正确，什么也不提示，直接跳出循环进入页面
+    break;
+  } else {
+    alert("密码错误，请重新输入！");
+  }
+}
 
 // 全局变量：当前行数
 let currentRowCount = 0;

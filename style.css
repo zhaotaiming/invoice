@@ -1,0 +1,27 @@
+/* 设置页面基础字体和背景 */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 美化链接，像按钮一样 */
+a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+/* 鼠标悬停时改变颜色 */
+a:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,38 @@
+body {
+    font-family: 'Noto Sans SC', sans-serif; /* 使用 Google Fonts 加载的字体 */
+    margin: 20px;
+}
+#pdfContent {
+    width: 100%;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+form {
+    margin-bottom: 20px;
+}
+.inputRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;  /* 每行之间的间距 */
+}
+
+.inputRow label {
+    margin-right: 10px;  /* 标签与输入框的间距 */
+}
+
+.inputRow input {
+    margin-right: 20px;  /* 输入框之间的间距 */
+    flex: 1;  /* 让输入框均分剩余空间 */
+    min-width: 100px;  /* 设置输入框的最小宽度 */
+}
